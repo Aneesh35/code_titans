@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Varnotsava</title>
+
+  <!-- for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- font style for nav  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+  <!-- font style for hero-para  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
+
+  <!-- font style for panel  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+  <!-- font style for events  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@400&family=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="newstyles.css">
+  <link rel="shortcut icon" href="favicon1.ico" type="image/x-icon">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo2.png" alt="Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#" id="homeBtn" onclick="showHomePage()">Home</a></li>
+        <li><a href="#" id="eventBtn" onclick="showEvents()">Events</a></li>
+        <li><a href="#" id="registerBtn" onclick="showregister()">Register</a></li>
+        <li><a href="#" id="galleryBtn" onclick="loadGallery()">Gallery</a></li>
+        <li><a href="#" id="contactBtn" onclick="showContactDetails()">Contact</a></li>
+        <li><a
+          href="https://www.google.com/maps/place/Shri+Madhwa+Vadiraja+Institute+of+Technology+and+Management/@13.2546004,74.7824982,17z/data=!3m1!4b1!4m6!3m5!1s0x3bbcaffcb81452c5:0xb18b6b77e04b088b!8m2!3d13.2545952!4d74.7850731!16s%2Fm%2F0100qvdl?authuser=0&entry=ttu"
+          target="_blank">Maps</a></li>
+          <li><a href="adminlogin.html" id="loginBtn" >Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="panel">
+    <p><a href="https://sode-edu.in/" target="_blank">Want
+        to know more about SMVITM click here</a> <i class="fa-solid fa-chevron-right"></i></p>
+  </div>
+
+
+
+  <section class="hero">
+    <div class="hero-img zoom-in1-text"></div>
+    <p class="hero-para hero-section zoom-in-text"><i class="fa-solid fa-sun"></i>&nbsp;SMVITM Presents
+      Varnotsava&nbsp;<i class="fa-solid fa-sun"></i></p>
+  </section>
+
+  <div id="home-content">
+    <p>As you embark upon the mystical realm of SMVITM College, the veils of mundane reality shall be lifted, and you
+      shall witness the enchanting spirit of creativity and jubilation that is Varnotsava, our annual cultural gala.The
+      very air shall be laden with the warmth and hospitality that defines our college, beckoning you into the embrace
+      of our vibrant community. Varnotsava transcends the boundaries of mere festivity, serving as a tribute to the
+      marvelous mosaic of talents and cultures that enriches our world. Our gates are open to you, dear seeker of
+      wonder, to revel in the magic of Varnotsava, where the threads of tradition and fellowship intertwine, and every
+      moment brims with revelry.</p>
+  </div>
+  <div id="icon_wrapper">
+    <a target="_blank" class="fuse_social_icons_links facebook " data-nonce="01e115b0a1" data-title="facebook" href="https://www.facebook.com/officialsmvitm"><i class="fa-brands fa-facebook-f"></i></a>
+    <a target="_blank" class="fuse_social_icons_links twitter" data-nonce="01e115b0a1" data-title="twitter" href="https://twitter.com/SmvitM"><i class="fa-brands fa-twitter"></i></a>
+    <a target="_blank" class="fuse_social_icons_links linkedin" data-nonce="01e115b0a1" data-title="linkedin" href="https://www.linkedin.com/company/shri-madhwa-vadiraja-institute-of-technology-and-management/"><i class="fa-brands fa-linkedin-in"></i></a>
+    <a target="_blank" class="fuse_social_icons_links youtube" data-nonce="01e115b0a1" data-title="youtube" href="https://www.youtube.com/SMVITMBANTAKAL"><i class="fa-brands fa-youtube"></i></a>
+    <a target="_blank" class="fuse_social_icons_links instagram" data-nonce="01e115b0a1" data-title="instagram" href="https://www.instagram.com/smvitm.sode/"><i class="fa-brands fa-instagram"></i></a>
+  </div>
+
+  <section>
+
+    <p class="events-heading" id="eventBtn" onclick="showEvents()"><b>EVENTS</b><i class="fa-solid fa-chevron-down"></i></p>
+
+    <div id="events" class="hidden">
+      <p><input type="text" id="search" placeholder="Search events" oninput="filterEvents()"></p>
+
+      <ol id="eventList">
+        <li id="electrocutebtn" onclick="showelectrocute()"><i class="fa-solid fa-bolt-lightning"></i> &nbsp;&nbsp;&nbsp;&nbsp;Electrocuted</li>
+           <div id="electrocute" class="hidden">
+            <p class="eventify">
+              The event is structured for teams of two members and consists of two rounds. Round 1, the prelims, involves a simple electronics-oriented pen and paper test comprising 10 questions that must be answered within a specified time frame. In Round 2, the Mains, only the top qualifiers from Round 1 progress. Here, participants engage in bidding for components necessary to complete an incomplete circuit provided to them. The bidding points allocated to each team are directly linked to the marks they earned in the first round, establishing a competitive environment where successful performance in the initial test influences the resources available for the subsequent practical challenge in the Mains.
+            </p>
+           </div>
+        <li id="ctccbtn" onclick="showctcc()"><i class="fa-solid fa-code"></i> &nbsp;&nbsp;Code Troopers Code Contest</li>
+        <div id="ctcc" class="hidden">
+          <p class="eventify">
+            The event comprises a single round where participants solve three questions within a two-hour timeframe. Participants must be present near the venue five minutes before the event's commencement and log in to the contest platform using their registered email ID. They have the option to use their own laptop or utilize the computer system provided. Each question carries a predetermined score based on the number of test cases a participant's code successfully passes. If a participant submits multiple solutions for a challenge, their score reflects the highest achieved. In a game challenge, the participant's score corresponds to the last code submission. Participants are ranked according to their scores, and in the event of a tie, the total time taken to submit the last solution determining a higher score serves as the tiebreaker.
+          </p>
+        </div>
+        <li id="robobtn" onclick="showrobo()"><i class="fa-solid fa-robot"></i> &nbsp;&nbsp;Robo Soccer </li>
+        <div id="robo" class="hidden">
+          <p class="eventify">
+            In this robot competition, manually controlled bots aim to push the ball into their opponent's goalpost. The game follows knockout matches, with the winning team advancing to the next round. Each match lasts 5 minutes, split into two 2-minute rounds separated by a 1-minute technical timeout. Teams may request an additional timeout of 1 minute without penalties. Any further extension deducts 1 point per minute, capping at a total timeout of 1+3 minutes, beyond which disqualification occurs. Goals scored accumulate one point each, and the ball remains in play after a goal is scored. Bots can push or hit the ball but are prohibited from holding or grabbing it. Intentionally impairing the opponent's bot leads to immediate disqualification upon objection. If both bots remain motionless for 10 seconds, they will be reset, and toppled bots can be reset after the referee's signal, with the nature of reset determined by the referee. Any breach of fair play results in immediate disqualification.
+          </p> 
+        </div>
+        <li id="bgmibtn" onclick="showbgmi()"><i class="fa-solid fa-gamepad"></i> &nbsp;&nbsp;BGMI </li>
+        <div id="bgmi" class="hidden">
+          <p class="eventify">
+            Teams participating in the tournament must have a roster of maximum four players, with registrations open for three to four individuals. The use of triggers or gaming consoles is prohibited, but finger sleeves are allowed. iPads and emulators are not permissible, and cheating allegations require recording the in-game death replay for reporting. Matches occur in the advance room, with points awarded based on finishes and BGIS points table rankings. Team scores comprise position points added to the number of finishes achieved. Disqualification awaits teams caught teaming up or modifying the BATTLEGROUNDS MOBILE INDIA client. In case of a points tie, the number of finishes takes precedence. The initial round features Classic Erangel, advancing the top four scoring teams to subsequent rounds until the finals. The final consists of two matches, with the winner determined by accumulated points. If a server crash occurs, the game restarts, and the administrators' or judges' decisions stand as final in all situations.
+          </p>
+        </div>
+        <li id="techpursbtn" onclick="showtechpurs()"><i class="fa-solid fa-microchip"></i> &nbsp;&nbsp;Tech Pursuit </li>
+        <div id="techpurs" class="hidden">
+          <p class="eventify">
+            The event caters to groups of three members and unfolds in two distinct rounds. The preliminary round comprises a questionnaire encompassing general knowledge and technology-related topics. Teams must navigate through this initial phase to qualify for the final round. In the finale, teams engage in an IT-themed treasure hunt. Participants must decipher clues provided, leading them through a series of challenges and tasks, culminating in the discovery of the ultimate treasure. This high-stakes round tests the teams' problem-solving abilities, technological acumen, and collaborative skills to emerge victorious in the treasure hunt.
+          </p>
+        </div>
+        <li id="presentbtn" onclick="showpresent()"><i class="fa-solid fa-person-chalkboard"></i> &nbsp;&nbsp;Paper Presentaion </li>
+        <div id="present" class="hidden">
+          <p class="eventify">
+            The presentation has a time limit of 10 minutes, with an additional 2 minutes allocated for potential questions or further discussion. The participation is limited to a maximum of two members per submission. The paper must adhere to the IEEE format, ensuring compliance with the specified guidelines. To submit the paper, participants need to send it to cocurricular@sode-edu.in, and the submission deadline is set for March 16th.
+          </p>
+        </div>
+        <li  id="linefolbtn" onclick="showlinefol()"><i class="fa-solid fa-robot"></i> &nbsp;&nbsp;Line Follower </li>
+        <div id="linefol"class="hidden">
+          <p class="eventify">
+            The competition revolves around an automated wireless bot aiming to complete tracks in the shortest time. It comprises two rounds: a knockout initial round filtering bots for the second round and a final judgment round determining the fastest bot as the tournament victor. Both rounds feature distinct maps, with the second round showcasing a more intricate layout than the first. The maps remain undisclosed until the event day, featuring a consistent black line or trajectory on a white arena throughout all rounds. Ultimately, the bot achieving the fastest finish in the final round emerges as the competition's champion.
+          </p>
+        </div>
+        <li id="roboracebtn" onclick="showroborace()"><i class="fa-solid fa-robot"></i> &nbsp;&nbsp;Robo Race </li>
+        <div id="roborace" class="hidden">
+          <p class="eventify">
+            In this tournament, manually controlled robots must navigate through tracks containing obstacles to achieve the shortest traversal time. There are two tracks: one for the knockout round and another for the final judgment. All bots must complete the knockout track, with qualifiers advancing to the next round. The time taken to move from start to finish determines final rankings. Checkpoints between obstacles allow players to skip obstacles; however, doing so incurs penalties beyond one free skip, limited to three skips in total. Going off-track is permitted five times, with penalties for additional instances. Trial runs are prohibited, but each team can execute one powered run between checkpoints per track section. Overall, teams are limited to one such run per track.
+          </p>
+        </div>
+        <!-- Add more events as needed -->
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <p class="register-heading" id="registerBtn" onclick="showregister()"><b>REGISTER HERE</b><i
+        class="fa-solid fa-chevron-down"></i></p>
+
+    <!--registration-links-->
+    <div id="register" class="hidden">
+      <!-- Different registration links -->
+      <div class="reg-css">
+        <div class="boxyify"> <img src="Electrocuted.png" class="image" alt="QR Code"><a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdfOhWitlX7uc5U5c7-_flfQ1J5DkEbYAuhCpskn1V5_m1x5w/viewform?usp=pp_url"
+            target="_blank" class="contentify">Electrocuted Event Registration</a></div>
+        <div class="boxyify"><img src="CodeTroopers Contest.png" class="image" alt="QR Code"><a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfnjG_mmrOZZmH0vE0fbsbDSCAHIQo2KcVU0_WeD-22z8PPAA/viewform?usp=pp_url"
+            target="_blank" class="contentify"> CodeTroopers Event Registration</a></div>
+        <div class="boxyify"><img src="ROBO SOCCER.png" class="image" alt="QR Code"><a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSe8CaK9uElgdBaGX_coHIhhdt_8Cr9jULDpKpaCifgKTAgpJQ/viewform?usp=pp_url"
+            target="_blank" class="contentify"> Robo Soccer Event Registration</a></div>
+        <div class="boxyify"><img src="BGMI.png" class="image" alt="QR Code"><a
+            href="https://docs.google.com/forms/d/e/1FAIpQLScdyYXQTks7Pj5le98ooNxLiRm3RkL2DbUHgpEGSaC8FAcgsQ/viewform?usp=pp_url"
+            target="_blank" class="contentify"> BGMI Event Registration</a></div>
+        <div class="boxyify"><img src="TECH PURSUIT.png" class="image" alt="QR Code"><a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfO0FIMG-QmVcbVxEpombBPLVRqX1fAvcQa29W78ESyZ8gCgw/viewform?usp=pp_url"
+            target="_blank" class="contentify"> Tech Pursuit Event Registration</a></div>
+        <div class="boxyify"><img src="Paper Presentation.png" class="image" alt="QR Code"><a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSf8CBdszDybuohEi2ODLur9unnY_KoK7vHo4VGZckGGXNMKoQ/viewform?usp=pp_url"
+            target="_blank" class="contentify"> Presentation Event Registration</a></div>
+        <div class="boxyify"><img src="LINE FOLLOWER.png" class="image" alt="QR Code"><a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfSW4yfyIme8xA6SsFjWqkSNTn5PMx_X_RKt74P37RBcxsPpQ/viewform?usp=pp_url"
+            target="_blank" class="contentify"> Line Follower Event Registration</a></div>
+        <div class="boxyify"><img src="Robo Race.png" class="image" alt="QR Code"><a
+            href="https://docs.google.com/forms/d/e/1FAIpQLScU00DwVEdfFthJvqB5_OQKtu2RQflSlDhnoA7u9F4pVLDdSg/viewform?usp=pp_url"
+            target="_blank" class="contentify"> Robo Race Event Registration</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <p class="gallery-heading" id="galleryBtn" onclick="loadGallery()"><b>GALLERY</b> <i class="fa-solid fa-chevron-down"></i>
+    </p>
+
+    <div id="image-container" class="hidden">
+      <a href="https://sode-edu.in/annual-sports-meet-24-02-2018/" target="_blank"><img src="gallery2.png" alt="img"
+          class="imagify"></a>
+      <a href="https://sode-edu.in/smvitm-lakshya-motorsports-team-with-sae-supra-car/" target="_blank"><img
+          src="gallery1.png" alt="img" class="imagify"></a>
+      <a href="https://sode-edu.in/varnothsava17-16-02-2017/" target="_blank"><img src="gallery4.png" alt="img"
+          class="imagify"></a>
+      <a href="https://sode-edu.in/graduation-day-12-11-2017/" target="_blank"><img src="gallery3.png" alt="img"
+          class="imagify"></a>
+      <a href="https://sode-edu.in/avishkar-2k1605-11-2016/" target="_blank"><img src="gallery5.png" alt="img"
+          class="imagify"></a>
+      <a href="https://sode-edu.in/first-year-be-orientation-day-31-07-2016/" target="_blank"><img src="gallery6.png"
+          alt="img" class="imagify"></a>
+      <a href="https://sode-edu.in/varnothsava-16-11-03-2016/" target="_blank"><img src="gallery7.png" alt="img"
+          class="imagify"></a>
+      <a href="https://sode-edu.in/6th-annual-day-13-02-2016/" target="_blank"><img src="gallery8.png" alt="img"
+          class="imagify"></a>
+      <a href="https://sode-edu.in/independence-day-15-8-2015/" target="_blank"><img src="gallery9.png" alt="img"
+          class="imagify"></a>
+      <a href="https://sode-edu.in/graduation-day-02-11-14/" target="_blank"><img src="gallery10.png" alt="img"
+          class="imagify"></a>
+      <a href="https://sode-edu.in/vanamahothsava-celebrations-01-09-14/" target="_blank"><img src="gallery11.png"
+          alt="img" class="imagify"></a>
+      <a href="https://sode-edu.in/independence-day-celebration/" target="_blank"><img src="gallery12.png" alt="img"
+          class="imagify"></a>
+    </div>
+  </section>
+
+  
+  
+
+  <footer>
+    <div id="contact-details">
+      <h2 class="contactify">Contact Details</h2>
+      <p>Shri Madhwa Vadiraja Institute of Technology and Management,</p>
+      <p>Vishwothamma Nagar,Udupi</p>
+      <p>Udupi-574 115,Karnataka,India</p>
+      <p>Tel:+91 96116 15001</p>
+      <p>Email:info@sode-edu.in</p>
+    </div>
+  </footer>
+
+  <!-- <header>
+    <h1 class="gradient-text">fossheim.io</h1>
+  </header> -->
+
+
+
+
+
+  <!-- Your content goes here -->
+
+  <script src="newscript.js"></script>
+</body>
+
+</html>

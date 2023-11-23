@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="admin-login-form" id="admin-login-form">
+    <div class="logify"><img src="admin1.webp" style="height: 70px;">ADMIN LOGIN</div>
+    <div class="userpass">
+    <form action="admin.php" method="post">
+      <label for="username" style="font-size:larger;">Username:</label>
+      <input class="input_spec" type="text" id="username" name="username" required>
+
+      <label for="password"  style="font-size:larger;">Password:</label>
+      <input class="input_spec" type="password" id="password" name="password" required>
+      <button class="button_specs" type="submit">Login</button>
+    </form>
+  </div>
+  </div>
+
+  <div class="student-list" id="student-list">
+    <!-- Student list will be displayed here after successful login -->
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
